@@ -22,9 +22,9 @@ resources:
 - name: dummy-repo
   type: git
   source:
-    uri: /Users/pivotal/workspace/dummy-ci
+    uri: git@github.com:flawedmatrix/dummy-ci.git
     branch: master
-    # private_key: {{github_deployment_key__bosh-openstack-cpi-release}}
+    private_key: {{github_key}}
 
 - name: release-version-semver
   type: semver
