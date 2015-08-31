@@ -6,8 +6,8 @@ set -e -x
 
 cd dummy-repo
 
-# touch $release_version
-# 
-# git add .
-# 
-# git commit -m "New final release v $release_version"
+touch $release_version
+
+git add .
+
+git commit -m "New final release v $release_version"
