@@ -19,7 +19,7 @@ jobs:
     params: {file: release-version-semver/number}
 
   - put: dummy-repo
-    params: {repository: promote/dummy-repo, rebase: true, tag: release-version-semver/integer_version, tag_prefix: "v"}
+    params: {repository: promote/dummy-repo, rebase: true, tag: promote/integer_version, tag_prefix: "v"}
 
 resources:
 - name: dummy-repo
