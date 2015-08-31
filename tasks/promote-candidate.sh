@@ -2,7 +2,7 @@
 
 set -e -x
 
-release_version=`cat release_version_semver/number`
+release_version=`cat release-version-semver/number`
 
 cd dummy-repo
 
