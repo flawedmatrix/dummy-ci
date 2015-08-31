@@ -10,7 +10,7 @@ jobs:
   plan:
   - aggregate:
     - {trigger: false, get: dummy-repo}
-    - {trigger: false, get: release-version-semver}
+    - {trigger: false, get: release-version-semver, params: {bump: major}}
 
   - task: promote
     file: dummy-repo/tasks/promote-candidate.yml
@@ -19,7 +19,7 @@ jobs:
     params: {file: release-version-semver/number}
 
   - put: dummy-repo
-    params: {repository: promote/dummy-repo, rebase: true, tag: release-version-semver/number, tag_prefix: "v "}
+    params: {repository: promote/dummy-repo, rebase: true, tag: release-version-semver/integer_version, tag_prefix: "v"}
 
 resources:
 - name: dummy-repo

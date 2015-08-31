@@ -2,6 +2,6 @@
 
 set -e -x
 
-release_version=`cat release-version-semver/number`
+cut -d "." -f1 release-version-semver/number > release-version-semver/integer_version
 
 cd dummy-repo
