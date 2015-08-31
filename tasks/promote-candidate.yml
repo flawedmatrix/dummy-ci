@@ -1,0 +1,9 @@
+---
+platform: linux
+
+inputs:
+  - name: dummy-repo
+  - name: release-version-semver
+
+run:
+  path: dummy-repo/tasks/promote-candidate.sh
