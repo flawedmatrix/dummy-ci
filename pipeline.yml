@@ -18,6 +18,9 @@ jobs:
   - put: release-version-semver
     params: {file: release-version-semver/number}
 
+  - put: dummy-repo
+    params: {repository: promote/dummy-repo, rebase: true, tag: release-version-semver/number, tag_prefix: "v "}
+
 resources:
 - name: dummy-repo
   type: git
